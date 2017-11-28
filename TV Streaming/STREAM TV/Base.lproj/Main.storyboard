@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6en-xi-IKS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TV Stream-->
+        <scene sceneID="LUE-RP-s7l">
+            <objects>
+                <viewController id="6en-xi-IKS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HeD-QM-Qms"/>
+                        <viewControllerLayoutGuide type="bottom" id="VX6-mw-Jjg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2zO-eo-0Q1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkR-pe-1PC">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GkR-pe-1PC" secondAttribute="height" multiplier="375:44" id="LBC-5g-mgs"/>
+                                    <constraint firstAttribute="height" constant="44" id="N9d-XH-LuV"/>
+                                    <constraint firstAttribute="width" constant="375" id="Xgs-gD-9PD"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem id="Jly-c0-IF7"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93n-cx-hkb">
+                                <rect key="frame" x="125" y="269" width="125" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="93n-cx-hkb" secondAttribute="height" multiplier="125:128" id="IPS-W9-2hr"/>
+                                    <constraint firstAttribute="width" constant="125" id="RNF-tU-t2W"/>
+                                    <constraint firstAttribute="height" constant="128" id="eBv-HO-TcD"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="play.png"/>
+                                <connections>
+                                    <segue destination="Igy-HW-vTd" kind="modal" id="glo-fT-8IQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86432868240000005" green="0.46913105249999998" blue="0.17990842460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GkR-pe-1PC" firstAttribute="top" secondItem="HeD-QM-Qms" secondAttribute="bottom" constant="8" id="2Z4-QT-FnL"/>
+                            <constraint firstItem="GkR-pe-1PC" firstAttribute="leading" secondItem="2zO-eo-0Q1" secondAttribute="leadingMargin" constant="-16" id="I3G-ex-c1d"/>
+                            <constraint firstItem="VX6-mw-Jjg" firstAttribute="top" secondItem="93n-cx-hkb" secondAttribute="bottom" constant="270" id="L4M-0L-1H5"/>
+                            <constraint firstItem="93n-cx-hkb" firstAttribute="leading" secondItem="2zO-eo-0Q1" secondAttribute="leadingMargin" constant="109" id="eLA-5s-ScP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GkR-pe-1PC" secondAttribute="trailing" constant="-16" id="jZV-Za-0bf"/>
+                            <constraint firstItem="93n-cx-hkb" firstAttribute="top" secondItem="GkR-pe-1PC" secondAttribute="bottom" constant="197" id="r3D-eY-elW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="93n-cx-hkb" secondAttribute="trailing" constant="109" id="z18-Yk-9ap"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="TV Stream" id="cbk-kY-8DA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ero-JP-q4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="14"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="9am-bL-7eM">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="Igy-HW-vTd" customClass="Streaming_bosq" customModule="STREAM_TV" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cve-5C-Fb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="903"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.png" width="128" height="128"/>
+    </resources>
+</document>
